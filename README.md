@@ -6,7 +6,7 @@ API Rest em Python utilizando Flask para a verificação se um ou mais telefones
 A API utiliza SQLite para armazenamento dos dados e cria um banco de nome "telefones.db" contendo 2 tabelas: "validos" e "bloqueados",
 onde serão cadastrados, alterados ou removidos via requisição HTTP.
 
-A API tem as seguintes funções: 
+# A API tem as seguintes funções: 
 
   GET - Retorna 2 listas: "Lista validos" e "Lista bloqueados" somando todos os telefones cadastrados
 
@@ -20,13 +20,12 @@ Enviar os telefones como uma lista (Ex. [11111111,22222222,33333333]), fazer req
 
   127.0.0.1:5000/telefones/
 
+# Requisitos
 
+  Phython 3
+  flask-1.1.2
+  sqlite3
+  
+# Rodando a aplicação
 
-  
-  
-  
-  
-
-
-  Enviar os telefones como uma lista (Ex. [11111111,22222222,33333333]) para o seguinte endereço:
-  
+  Executar o script api.py
