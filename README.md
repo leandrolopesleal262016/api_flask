@@ -1,4 +1,4 @@
-# api_flask
+# API_FLASK
 Api Flask Agente Virtual de Telefonia
 
 API Rest em Python utilizando Flask para a verificação se um ou mais telefones podem ou não ter acionamentos.
@@ -22,10 +22,10 @@ Enviar os telefones como uma lista (Ex. [11111111,22222222,33333333]), fazer req
 
 # Requisitos
 
-  Phython 3
-  flask-1.1.2
-  sqlite3
+Phython 3
+flask-1.1.2
+sqlite3
   
 # Rodando a aplicação
 
-  Executar o script api.py
+Executar o script api.py
