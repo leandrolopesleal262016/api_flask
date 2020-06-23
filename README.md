@@ -28,4 +28,4 @@ sqlite3
   
 # Rodando a aplicação
 
-Executar o script api.py
+Executar o script api.py e fazer as requisições em 127.0.0.1:5000/telefones/
