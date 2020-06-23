@@ -16,14 +16,14 @@ onde serão cadastrados, alterados ou removidos via requisição HTTP.
 
   DELETE - Remove n telefones da lista bloqueados (os telefones removidos da tabela bloqueados vão automaticamente para a tabela validos)
 
-Enviar os telefones como uma lista (Ex. [11111111,22222222,33333333]), fazer requisiçoes para a url:
+Enviar os telefones como uma lista ( Ex. [11111111,22222222,33333333] ), fazer requisiçoes para a url:
 
   127.0.0.1:5000/telefones/
 
 # Requisitos
 
-Phython 3
-flask-1.1.2
+Phython 3,
+flask-1.1.2,
 sqlite3
   
 # Rodando a aplicação
