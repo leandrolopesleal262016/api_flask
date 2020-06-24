@@ -46,7 +46,7 @@ do sistema
 
 Phython 3,
 flask 1.1.2,
-Flask-SQLAlchemy 2.4.3
+Flask-SQLAlchemy 2.4.3,
 sqlite3
   
 # Rodando a aplicação
