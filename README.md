@@ -22,7 +22,7 @@ data:      {"telefones":["123","456","789","8569","965842"]}
 url:       127.0.0.1:5000/api/telefones
 
 
-Cadastra/remove 1 ou n telefones já existentes na lista de bloqueios ("status" vai indicar se o numero e valido para discagem)
+Cadastra/remove 1 ou n telefones já existentes na lista de bloqueios 
 
 metodo:    POST
 data:      {"telefones":[{"numero":"123","status":true},{"numero":"456","status":false}]} 
