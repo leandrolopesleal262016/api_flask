@@ -3,29 +3,52 @@ Api Flask Agente Virtual de Telefonia
 
 API Rest em Python utilizando Flask para a verificação se um ou mais telefones podem ou não ter acionamentos.
 
-A API utiliza SQLite para armazenamento dos dados e cria um banco de nome "telefones.db" contendo 2 tabelas: "validos" e "bloqueados",
-onde serão cadastrados, alterados ou removidos via requisição HTTP.
+A API utiliza SQLite para armazenamento dos dados e cria um banco de nome "telefones.db" contendo uma tabela onde temos a coluna 'numeros'
+do tipo string e e a coluna 'status' do tipo boleana que indicara se o telefone é valido ou não para acionamento.
 
-# A API tem as seguintes funções: 
+# A API tem as seguintes funções:
 
-  GET - Retorna 2 listas: "Lista validos" e "Lista bloqueados" somando todos os telefones cadastrados
+Consultar 1 ou n telefones para ferificar se sao validos para discagem
 
-  POST - Envia n telefones para serem consultados e retorna um dicionario contendo o numero do telefone como chave e seu estado como      valor, podendo ser seu estado: "valido", "bloqueado" ou "nao_encontrado" (para o caso do telefone pesquisado não estar em nenhuma das duas tabelas)
+metodo:    POST
+data:      {"telefones":["123","456","789","8569","965842"]}
+url:       127.0.0.1:5000/api/telefones/validos
 
-  PUT - Insere n telefones na lista bloqueados
 
-  DELETE - Remove n telefones da lista bloqueados (os telefones removidos da tabela bloqueados vão automaticamente para a tabela validos)
+Cadastra 1 ou n telefones
 
-Enviar os telefones como uma lista ( Ex. [11111111,22222222,33333333] ), fazer requisiçoes para a url:
+metodo:    PUT
+data:      {"telefones":["123","456","789","8569","965842"]}
+url:       127.0.0.1:5000/api/telefones
 
-  127.0.0.1:5000/telefones/
 
+Cadastra/remove 1 ou n telefones já existentes na lista de bloqueios ("status" vai indicar se o numero e valido para discagem)
+
+metodo:    POST
+data:      {"telefones":[{"numero":"123","status":true},{"numero":"456","status":false}]} 
+url:       127.0.0.1:5000/api/telefones/update
+
+
+Consultar todos os telefones
+
+metodo:    GET
+url:       127.0.0.1:5000/telefones/
+
+
+# Para um alto volume de dados:
+
+Quando temos um grande volume de dados o importante é dividi-lo em partes (paginas)
+assim evitamos um alto processamento em um unico ponto e temos um melhor desenpenho 
+do sistema
+
+ 
 # Requisitos
 
 Phython 3,
-flask-1.1.2,
+flask 1.1.2,
+Flask-SQLAlchemy 2.4.3
 sqlite3
   
 # Rodando a aplicação
 
-Executar o script api.py e fazer as requisições em 127.0.0.1:5000/telefones/
+Executar o script run.py 
